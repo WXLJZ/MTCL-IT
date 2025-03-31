@@ -1,4 +1,4 @@
-# CMTL-IT: Contrastive Multi-task Learning with Instruction Tuning for Metaphor Sentiment Analysis
+# MTCL-IT: Multi-Task Contrastive Learning with Instruction Tuning for Metaphor Sentiment Analysis
 
 **Authors:** Anonymous Authors
 
@@ -7,7 +7,7 @@
 
 <!-- ![Teaser Figure](docs/teaser.png) -->
 
->This repository contains the official implementation and experimental resources for the paper **[CMTL-IT: Contrastive Multi-task Learning with Instruction Tuning for Metaphor Sentiment Analysis]**
+>This repository contains the official implementation and experimental resources for the paper **[MTCL-IT: Multi-Task Contrastive Learning with Instruction Tuning for Metaphor Sentiment Analysis]**
 
 ## 📝 Abstract
 
