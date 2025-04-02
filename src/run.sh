@@ -1,7 +1,7 @@
 python main.py \
     --ICL \
-    --dataset LCC \
-    --retrieve_model_path /xxx/checkpoints/models/pretrained_model/checkpoint-15680 \
+    --dataset EMSA \
+    --retrieve_model_path /xxx/checkpoints/models/EMSA/pretrained_model/checkpoint-15680 \
     --num_train_epochs 35 \
     --model_name_or_path /xxx/models/flan-t5-large \
     --do_eval_all \

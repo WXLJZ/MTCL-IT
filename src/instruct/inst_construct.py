@@ -5,7 +5,7 @@ from tqdm import tqdm
 
 from utils.logger import get_logger
 from instruct.retriever import Retriever
-from instruct.inst_template import lcc_icl_template, lcc_template, lcc_cot_template, lcc_mtl_template, cmsa_icl_template, cmsa_template, cmsa_cot_template
+from instruct.inst_template import emsa_icl_template, emsa_template, emsa_cot_template, emsa_mtl_template, cmsa_icl_template, cmsa_template, cmsa_cot_template
 
 logger = get_logger(__name__)
 
@@ -18,7 +18,7 @@ def construct_inst(json_path, save_path, retriever=None, args=None):
             demonstrations = retriever.retrieve(entry)
             demonstrations_str = ""
             for demo in demonstrations:
-                if args.dataset == 'LCC':
+                if args.dataset == 'EMSA':
                     demonstrations_str += f"Input: [{demo[0]}] | Source component: [{demo[1][1]}] | Target component: [{demo[1][2]}]\n" \
                                           f"Output: The sentiment is [{demo[1][0]}]\n"
                 elif args.dataset == 'CMSA':
@@ -28,7 +28,7 @@ def construct_inst(json_path, save_path, retriever=None, args=None):
                     raise ValueError(f"Invalid dataset name: {args.dataset}")
 
             if args.CoT:
-                template = lcc_cot_template if args.dataset == 'LCC' else cmsa_cot_template
+                template = emsa_cot_template if args.dataset == 'EMSA' else cmsa_cot_template
                 inst = template.format(
                     input=entry['input'],
                     target=entry['Target'],
@@ -36,7 +36,7 @@ def construct_inst(json_path, save_path, retriever=None, args=None):
                     demonstration=demonstrations_str
                 )
             else:
-                template = lcc_icl_template if args.dataset == 'LCC' else cmsa_icl_template
+                template = emsa_icl_template if args.dataset == 'EMSA' else cmsa_icl_template
                 inst = template.format(
                     input=entry['input'],
                     target=entry['Target'],
@@ -47,7 +47,7 @@ def construct_inst(json_path, save_path, retriever=None, args=None):
             entry['instruction'] = inst
             entry['demonstration'] = demonstrations_str
         else:
-            template = lcc_template if args.dataset == 'LCC' else cmsa_template
+            template = emsa_template if args.dataset == 'EMSA' else cmsa_template
             inst = template.format(
                 input=entry['input'],
                 target=entry['Target'],

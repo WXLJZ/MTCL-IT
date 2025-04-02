@@ -59,7 +59,7 @@ class MetaphorDataset(Dataset):
             data = json.load(f)
         for d in data:
             input = d['instruction']
-            output = f"The sentiment is [{d['output']}]" if self.dataset_name == 'LCC' else f"情感极性是[{d['output']}]"
+            output = f"The sentiment is [{d['output']}]" if self.dataset_name == 'EMSA' else f"情感极性是[{d['output']}]"
             if len(input.split()) > self.max_len:
                 self.truncated_data_num += 1
             if self.data_type == 'train' or self.data_type == 'val':

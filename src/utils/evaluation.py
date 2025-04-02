@@ -133,7 +133,7 @@ def compute_scores(predictions, trues, dataset_name):
                     neu_right += 1
                 elif true_sentiment == '负向':
                     neg_right += 1
-    elif dataset_name == 'LCC':
+    elif dataset_name == 'EMSA':
         pos_true, pos_pred, pos_right = 0, 0, 0
         neu_true, neu_pred, neu_right = 0, 0, 0
         neg_true, neg_pred, neg_right = 0, 0, 0

@@ -1,5 +1,5 @@
 
-lcc_cot_template = '''As a metaphor sentiment specialist, analyze ONLY the sentiment interaction between source and target components. Ignore contextual sentiments. Follow these steps:
+emsa_cot_template = '''As a metaphor sentiment specialist, analyze ONLY the sentiment interaction between source and target components. Ignore contextual sentiments. Follow these steps:
 
 1. Metaphor Mapping: Identify how [source] characterizes [target]
 2. Sentiment Transfer: Determine which affective values transfer between domains
@@ -12,7 +12,7 @@ Now analyze:
 Input: [{input}] | Source component: [{source}] | Target component: [{target}]
 Your output: '''
 
-lcc_icl_template = '''Analyze how the source component’s sentiment affects the target in this metaphor. Output ONLY polarity (positive/negative/neutral).
+emsa_icl_template = '''Analyze how the source component’s sentiment affects the target in this metaphor. Output ONLY polarity (positive/negative/neutral).
 
 Example:
 {demonstration}
@@ -21,7 +21,7 @@ Now analyze:
 Input: [{input}] | Source component: [{source}] | Target component: [{target}]
 Output: '''
 
-lcc_mtl_template = '''Identify the source and target components in this metaphor. Output ONLY in the format "Source is [] | Target is []".
+emsa_mtl_template = '''Identify the source and target components in this metaphor. Output ONLY in the format "Source is [] | Target is []".
 
 Example:
 {demonstration}
@@ -30,7 +30,7 @@ Now identify:
 Input: [{input}]
 Output:'''
 
-lcc_template = '''Analyze how the source component’s sentiment affects the target in this metaphor. Output ONLY polarity (positive/negative/neutral).
+emsa_template = '''Analyze how the source component’s sentiment affects the target in this metaphor. Output ONLY polarity (positive/negative/neutral).
 Input: [{input}] | Source component: [{source}] | Target component: [{target}]
 Output: '''
 

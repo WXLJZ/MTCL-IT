@@ -426,7 +426,7 @@ def main():
     parser.add_argument('--seed', type=int, default=2024)
     parser.add_argument('--fp16', type=str, default=True)
     parser.add_argument('--device', type=str, default='cuda')
-    parser.add_argument('--dataset_name', type=str, default='LCC')
+    parser.add_argument('--dataset_name', type=str, default='CMSA')
 
     warnings.filterwarnings('ignore')
     args = parser.parse_args()
