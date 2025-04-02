@@ -9,7 +9,7 @@
 
 >This repository contains the official implementation and experimental resources for the paper **[MTCL-IT: Multi-Task Contrastive Learning with Instruction Tuning for Metaphor Sentiment Analysis]**
 
-## 📝 Abstract
+<!-- ## 📝 Abstract -->
 
 
 
@@ -23,7 +23,7 @@
     ├── 📁 models/           # Core models
     ├── 📁 utils/            # Data process & evaluation & some utils
     ├── 📄 main.py           # Main excution script
-    └── 📄 main.py           # Enhanced pre-trained for BERT yields Metaphor-BERT
+    └── 📄 pretrain.py       # Enhanced pre-trained for BERT yields Metaphor-BERT
 ```
 
 ## 🛠 Installation
@@ -37,7 +37,7 @@
 ```bash
 # Clone repository
 git clone https://github.com/XXXX/xxxxx.git
-cd xxxxxx
+cd MTCL-IT
 
 # Create conda environment
 conda create -n msa python=3.8
@@ -59,7 +59,7 @@ python pretrain.py
 CUDA_VISIBLE_DEVICES=0 bash run.sh
 ```
 
-## 📊 Results
+<!-- ## 📊 Results -->
 <!-- Performance on [Dataset Name]:
 
 Method	Metric1	Metric2	Metric3
@@ -67,7 +67,7 @@ Our Method	0.92	1.23	95.4%
 Baseline	0.85	1.45	89.7%
 Results Comparison -->
 
-## 📜 Citation
+<!-- ## 📜 Citation -->
 <!-- ```bash
 @article{yourcitationkey,
   title     = {Your Paper Title},
@@ -78,5 +78,5 @@ Results Comparison -->
 ``` -->
 
 
-## 📧 联系方式
+<!-- ## 📧 联系方式 -->
 <!-- Corresponding Author: [Your Name] - your.email@institution.edu -->
